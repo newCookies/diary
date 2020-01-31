@@ -1,0 +1,274 @@
+@charset "UTF-8";
+* {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  box-sizing: border-box;
+  white-space: normal;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0; }
+
+*:not(input, textarea) {
+  -webkit-touch-callout: none;
+  /*系统默认菜单被禁用*/
+  -webkit-user-select: none;
+  /*webkit浏览器*/
+  -khtml-user-select: none;
+  /*早起浏览器*/
+  -moz-user-select: none;
+  /*火狐浏览器*/
+  -ms-user-select: none;
+  /*IE浏览器*/
+  user-select: none;
+  /*用户是否能够选中文本*/ }
+
+#app {
+  background-color: white; }
+  #app .common-page {
+    max-width: 780px;
+    margin: 0 auto; }
+
+a {
+  color: #666;
+  text-decoration: none; }
+
+.common-body {
+  border-top: 46px solid transparent; }
+  .common-body.has-tabbar {
+    border-bottom: 50px solid transparent; }
+
+::-webkit-scrollbar-track {
+  height: 0px;
+  width: 0px;
+  background-color: #efefef; }
+
+::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+  background-color: #efefef; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #ccc; }
+
+/******font style********/
+.inline {
+  overflow: hidden;
+  white-space: nowrap;
+  /*不换行*/
+  text-overflow: ellipsis;
+  /*超出部分文字以...显示*/ }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+.text-left {
+  text-align: left; }
+
+.line20 {
+  line-height: 20px; }
+
+.line24 {
+  line-height: 24px; }
+
+.line30 {
+  line-height: 30px; }
+
+.fbold {
+  font-weight: bold; }
+
+.fnormal {
+  font-weight: normal; }
+
+.f11 {
+  font-size: 11px !important; }
+
+.f14 {
+  font-size: 14px !important; }
+
+.f18 {
+  font-size: 18px; }
+
+.f20 {
+  font-size: 20px; }
+
+.white,
+a.white,
+a:hover.white,
+a:visited.white,
+a:focus.white {
+  color: #fff !important; }
+
+.black,
+a.black,
+a:hover.black,
+a:visited.black,
+a:focus.black {
+  color: #333 !important; }
+
+.gray,
+a.gray,
+a:hover.gray,
+a:visited.gray,
+a:focus.gray {
+  color: #999 !important; }
+
+.gray-deep,
+a.gray-deep,
+a:hover.gray-deep,
+a:visited.gray-deep,
+a:focus.gray-deep {
+  color: #666 !important; }
+
+.blue,
+a.blue,
+a:hover.blue,
+a:visited.blue,
+a:focus.blue {
+  color: #127cdf !important; }
+
+.purple,
+a.purple,
+a:hover.purple,
+a:visited.purple,
+a:focus.purple {
+  color: #beb7ff !important; }
+
+.orange,
+a.orange,
+a:hover.orange,
+a:visited.orange,
+a:focus.orange {
+  color: #ffbf55 !important; }
+
+/******box style********/
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.mT10 {
+  margin-top: 10px; }
+
+.mR10 {
+  margin-right: 10px; }
+
+.mL5 {
+  margin-left: 5px; }
+
+.mR3 {
+  margin-right: 3px; }
+
+.mR5 {
+  margin-right: 5px; }
+
+.mB5 {
+  margin-bottom: 5px; }
+
+.mB15 {
+  margin-bottom: 15px; }
+
+.p15 {
+  padding: 15px; }
+
+.pLR15 {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.bg-white {
+  background-color: #fff; }
+
+/*.bg-gray {
+  background-color: #F9F9F9; }*/
+
+.clearfix {
+  clear: both; }
+
+.clearfix,
+.clearfix:after,
+.clearfix:before {
+  clear: both;
+  display: block; }
+
+.clearfix:after,
+.clearfix:before {
+  content: '';
+  display: table; }
+
+.hr {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid #e7eaec;
+  color: #fff;
+  height: 2px; }
+  .hr.dashed {
+    border-bottom-style: dashed; }
+
+.not-open {
+  background-color: #fff;
+  padding: 20%;
+  text-align: center; }
+  .not-open img {
+    width: 100%; }
+
+/*问答图文描述*/
+.media-list {
+  margin-top: 10px; }
+  .media-list.show {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px; }
+  .media-list .media {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 5px; }
+    .media-list .media .imgbox {
+      position: relative;
+      z-index: 2;
+      height: 200px;
+      text-align: center;
+      border: 1px dashed #e0e0e0;
+      background-size: contain; }
+    .media-list .media img {
+      max-width: 100%;
+      max-height: 100%; }
+    .media-list .media video {
+      position: relative;
+      z-index: 2; }
+    .media-list .media .btn-del-media {
+      position: absolute;
+      z-index: 9;
+      top: -3px;
+      right: -3px;
+      width: 24px;
+      height: 24px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      line-height: 24px;
+      text-align: center; }
+
+.van-nav-bar.channel-sale {
+  background-color: #1690e3 !important; }
+  .van-nav-bar.channel-sale .van-nav-bar__title, .van-nav-bar.channel-sale .van-icon, .van-nav-bar.channel-sale .van-nav-bar__text {
+    color: #fff; }
+
+.van-nav-bar--fixed, .van-tabbar--fixed {
+  max-width: 780px;
+  left: auto; }
+
+.van-popup--bottom {
+  max-width: 780px; }
+
+.pop-loading, .pop-loading-overlay {
+  background-color: transparent;
+  overflow: hidden; }
+
+.pop-loading-overlay {
+  top: 46px;
+  z-index: 99 !important; }
+
+.router-link-block {
+  display: block; }
